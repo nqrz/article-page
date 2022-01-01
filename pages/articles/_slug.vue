@@ -1,21 +1,21 @@
 <template>
   <div class="mb-2">
     <Container>
-      <img class="rounded-b-md" :src="`https://nizarbaihaqi.com/banner/${article.img}`" alt="Project Banner Image">
+      <img class="w-full rounded-b-md" :src="`https://nizarbaihaqi.com/banner/${article.img}`" alt="Project Banner Image">
     </Container>
     <Container>
-      <div>
-        <Card>
-          <div class="w-full mt-6 mb-10">
-            <h1 class="text-center">{{ article.title }}</h1>
-            <p class="text-center">Updated : {{ formatDate(article.updatedAt) }}</p>
-          </div>
-          <article>
-            <nuxt-content :document="article" />
-          </article>
-        </Card>
-        <PrevNext :prev="prev" :next="next" />
-      </div>
+      <Card>
+        <div class="mt-6 mb-10">
+          <h1 class="text-center">{{ article.title }}</h1>
+          <p class="text-center">Updated : {{ formatDate(article.updatedAt) }}</p>
+        </div>
+        <article>
+          <nuxt-content :document="article" />
+        </article>
+      </Card>
+    </Container>
+    <Container>
+      <PrevNext :prev="prev" :next="next" />
     </Container>
   </div>
 </template>

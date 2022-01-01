@@ -63,15 +63,15 @@ export default {
     <Container v-for="article in articles" :key="article.slug">
       <Card :link="true" :url="article.path">
         <h4 class="text-center">{{ article.title }}</h4>
+        <p class="text-center text-sm mb-1">{{ formatDate(article.createdAt) }}</p>
         <div class="flex justify-center gap-2">
           <p class="text-xs text-center inline-block" v-for="category in article.category" :key="category">
             {{ category }}
           </p>
         </div>
-        <p class="text-sm mb-4">Created at: {{ formatDate(article.createdAt) }}</p>
         <p>{{ article.description }}</p>
         <NuxtLink class="link" :to="article.path">
-          Check &rarr;
+          Read &rarr;
         </NuxtLink>
       </Card>
     </Container>

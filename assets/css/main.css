@@ -22,6 +22,10 @@ h6 {
   @apply text-lg lg:text-xl mb-3;
 }
 
+p {
+  @apply lg:text-lg mb-3
+}
+
 input {
   @apply rounded-md py-1 px-2 dark:bg-night-gray my-2
 }
